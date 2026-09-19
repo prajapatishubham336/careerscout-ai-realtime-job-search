@@ -1,0 +1,270 @@
+:root {
+    --bg: #f7f8fc;
+    --ink: #171a2b;
+    --muted: #74798d;
+    --line: #e5e7ef;
+    --accent: #635bff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    font-family: Inter, Arial;
+    color: var(--ink);
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+}
+
+aside {
+    width: 260px;
+    background: #15172a;
+    color: white;
+    padding: 30px 22px;
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.brand span {
+    color: #aaa6ff;
+}
+
+aside p {
+    color: #aeb1c4;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.live {
+    display: inline-block;
+    background: #202d2c;
+    color: #65e0b0;
+    border: 1px solid #294c45;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    margin-top: 18px;
+}
+
+.tips {
+    margin-top: 50px;
+}
+
+.tips b {
+    font-size: 11px;
+    color: #8589a4;
+    text-transform: uppercase;
+}
+
+.tips button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #30334b;
+    border-radius: 10px;
+    background: #20233a;
+    color: #ddd;
+    cursor: pointer;
+    text-align: left;
+}
+
+.tips button:hover {
+    background: #2b2e48;
+}
+
+main {
+    flex: 1;
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 55px;
+}
+
+header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 28px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0 0 8px;
+}
+
+h1 em {
+    font-style: normal;
+    color: var(--accent);
+}
+
+header p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.welcome {
+    text-align: center;
+    padding: 65px 10px;
+    color: var(--muted);
+}
+
+.orb {
+    width: 56px;
+    height: 56px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    background: #ecebff;
+    color: var(--accent);
+    border-radius: 18px;
+    font-size: 25px;
+}
+
+.welcome h2 {
+    color: var(--ink);
+    margin: 15px 0 7px;
+}
+
+.user {
+    margin: 20px 0 12px;
+    margin-left: auto;
+    max-width: 80%;
+    background: #e9e8ff;
+    padding: 12px 15px;
+    border-radius: 13px;
+}
+
+.ai {
+    color: #5e6376;
+    font-size: 14px;
+    margin: 12px 0 18px;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.job {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 24px #17204d09;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.company {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 5px 0 12px;
+}
+
+.pill {
+    background: #eeedff;
+    color: #5148dc;
+    border-radius: 14px;
+    padding: 6px 9px;
+    height: max-content;
+    font-size: 11px;
+}
+
+.meta,
+.skills {
+    font-size: 12px;
+    color: #555b6d;
+    margin: 9px 0;
+}
+
+.desc {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #6c7181;
+    min-height: 38px;
+}
+
+.apply {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    padding: 10px 13px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+input {
+    flex: 1;
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    font-size: 14px;
+    outline: 0;
+}
+
+form button {
+    border: 0;
+    background: var(--accent);
+    color: white;
+    border-radius: 13px;
+    padding: 0 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.loading {
+    display: none;
+    color: var(--muted);
+    font-size: 13px;
+    margin: 12px;
+}
+
+.more {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid var(--line);
+    background: #fff;
+    padding: 11px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        padding: 25px 16px;
+    }
+
+    .results {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+}

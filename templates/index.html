@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CareerScout AI</title>
+
+    <link rel="icon" href="data:,">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <aside>
+            <div class="brand">
+                ✦ CareerScout <span>AI</span>
+            </div>
+
+            <p>
+                Real-time job & internship discovery powered by AI web search.
+            </p>
+
+            <div class="live">
+                ● LIVE WEB SEARCH
+            </div>
+
+            <div class="tips">
+                <b>Try asking</b>
+
+                <button onclick="fill('Data Scientist jobs in Mumbai for fresher')">
+                    Data Scientist · Mumbai
+                </button>
+
+                <button onclick="fill('AI ML internship in Pune')">
+                    AI/ML Internship · Pune
+                </button>
+
+                <button onclick="fill('GenAI and LLM jobs in Bangalore')">
+                    GenAI / LLM · Bangalore
+                </button>
+            </div>
+        </aside>
+
+        <main>
+            <header>
+                <div>
+                    <h1>
+                        Find your next <em>opportunity.</em>
+                    </h1>
+
+                    <p>
+                        Tell me the role, location and job or internship you want.
+                    </p>
+                </div>
+            </header>
+
+            <section id="chat">
+                <div class="welcome">
+                    <div class="orb">✦</div>
+
+                    <h2>
+                        Search live opportunities
+                    </h2>
+
+                    <p>
+                        Example: “Data Scientist jobs in Mumbai for fresher.”
+                    </p>
+                </div>
+            </section>
+
+            <form id="form">
+                <input
+                    id="input"
+                    placeholder="e.g. GenAI internship in Pune..."
+                    autocomplete="off"
+                >
+
+                <button>
+                    Search →
+                </button>
+            </form>
+
+            <div class="loading" id="loading">
+                🌐 Searching the live web…
+            </div>
+        </main>
+
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

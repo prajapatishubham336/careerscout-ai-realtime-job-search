@@ -16,20 +16,11 @@ load_dotenv()
 
 app = FastAPI(title="CareerScout AI")
 
-app.mount(
-    "/static",
-    StaticFiles(directory="static"),
-    name="static"
-)
-
+app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
-
-
 class ChatRequest(BaseModel):
     message: str
     offset: int = 0
-
-
 def extract_json(text):
     try:
         return json.loads(text)
@@ -41,12 +32,9 @@ def extract_json(text):
                 return json.loads(match.group(0))
             except json.JSONDecodeError:
                 pass
-
     return {
         "summary": "Could not structure the search results.",
-        "jobs": []
-    }
-
+        "jobs": []}
 
 def live_search(query, offset=0):
     groq_key = os.getenv("GROQ_API_KEY")
